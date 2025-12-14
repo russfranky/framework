@@ -1,7 +1,6 @@
 {
   "buildCommand": "npm run build && npm run minify:css && npm run minify:js",
   "outputDirectory": "public",
-  "framework": "static",
   "rewrites": [
     {
       "source": "/(.*)",
