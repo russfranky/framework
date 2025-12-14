@@ -26,7 +26,7 @@ Reference the compiled bundle from your app or the included docs:
 <script src="/js/hubzz.min.js"></script>
 ```
 
-CDN-style include (after deploying the `public/` folder, e.g., to Vercel):
+CDN-style include (after deploying the `public/` folder, e.g., to Vercel; project name/host can be anything):
 ```html
 <!doctype html>
 <html lang="en">
@@ -42,7 +42,7 @@ CDN-style include (after deploying the `public/` folder, e.g., to Vercel):
   </body>
 </html>
 ```
-Replace `YOUR-HOST` with your deployment URL (e.g., `https://hubzz-ui-kit.vercel.app`). JS auto-initializes components on load; no extra setup required.
+Replace `YOUR-HOST` with your deployment URL (e.g., `https://hubzz-kit.vercel.app` or any other project name you choose). JS auto-initializes components on load; no extra setup required.
 
 ## Scripts
 - `build` – concatenate CSS/JS and copy docs to `public/`
