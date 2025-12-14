@@ -6,7 +6,7 @@
   <title>Hubzz UI Kit – Showcase</title>
   <link rel="stylesheet" href="/css/hubzz.css">
 </head>
-<body>
+<body class="light">
   <header class="navbar">
     <div class="navbar__inner container">
       <a class="navbar__brand" href="/docs/index.html">Hubzz UI Kit</a>
@@ -31,7 +31,7 @@
       </div>
     </section>
 
-    <section class="page-grid">
+    <section class="grid grid-3">
       <div class="card card--interactive">
         <div class="card__body">
           <h4 class="card__title">Buttons</h4>
@@ -42,7 +42,6 @@
           </div>
         </div>
       </div>
-
       <div class="card card--interactive">
         <div class="card__body">
           <h4 class="card__title">Form Controls</h4>
@@ -51,7 +50,6 @@
           <div class="form-hint">Built-in focus rings and states</div>
         </div>
       </div>
-
       <div class="card card--interactive">
         <div class="card__body">
           <h4 class="card__title">Tabs</h4>
@@ -69,52 +67,18 @@
           </div>
         </div>
       </div>
-
-      <div class="card card--interactive">
-        <div class="card__body">
-          <h4 class="card__title">Status</h4>
-          <div class="flex gap-8 items-center">
-            <span class="tag tag--success"><span class="tag__dot"></span>Live</span>
-            <span class="tag tag--warning"><span class="tag__dot"></span>Pending</span>
-            <span class="tag tag--error"><span class="tag__dot"></span>Error</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h3>Slider</h3>
-      <div class="slider" data-slider>
-        <div class="slider__track">
-          <div class="slider__slide">
-            <h4>Lightweight</h4>
-            <p>18KB gzipped bundle with zero dependencies.</p>
-          </div>
-          <div class="slider__slide">
-            <h4>Accessible</h4>
-            <p>WCAG-friendly patterns and focus management.</p>
-          </div>
-          <div class="slider__slide">
-            <h4>Customizable</h4>
-            <p>Override tokens via CSS variables to match your brand.</p>
-          </div>
-        </div>
-        <div class="slider__controls">
-          <button class="slider__btn" data-slider-prev aria-label="Previous">‹</button>
-          <button class="slider__btn" data-slider-next aria-label="Next">›</button>
-        </div>
-        <div class="slider__dots">
-          <button class="slider__dot is-active"></button>
-          <button class="slider__dot"></button>
-          <button class="slider__dot"></button>
-        </div>
-      </div>
     </section>
 
     <section class="grid grid-3">
       <div class="card">
         <div class="card__body">
-          <h4>Dropdown</h4>
+          <h4 class="card__title">Select & Dropdown</h4>
+          <label class="form-label" for="selectOne">Select</label>
+          <select id="selectOne" class="form-control">
+            <option>Option one</option>
+            <option>Option two</option>
+          </select>
+          <div class="divider"></div>
           <div data-dropdown>
             <button class="btn btn--secondary" data-dropdown-toggle>Open dropdown</button>
             <div class="dropdown__menu">
@@ -127,7 +91,84 @@
       </div>
       <div class="card">
         <div class="card__body">
-          <h4>Rating</h4>
+          <h4 class="card__title">Status & Tags</h4>
+          <div class="flex gap-8 items-center">
+            <span class="tag tag--success"><span class="tag__dot"></span>Live</span>
+            <span class="tag tag--warning"><span class="tag__dot"></span>Pending</span>
+            <span class="tag tag--error"><span class="tag__dot"></span>Error</span>
+          </div>
+          <div class="mt-8">
+            <span class="status status--success">Success badge</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__body">
+          <h4 class="card__title">Date Picker (static)</h4>
+          <div class="date-picker">
+            <div class="date-picker__header">
+              <button class="btn btn--outline btn--sm">‹</button>
+              <div>September 2025</div>
+              <button class="btn btn--outline btn--sm">›</button>
+            </div>
+            <div class="date-picker__grid">
+              <div class="date-picker__day is-selected">12</div>
+              <div class="date-picker__day">13</div>
+              <div class="date-picker__day is-today">14</div>
+              <div class="date-picker__day">15</div>
+              <div class="date-picker__day">16</div>
+              <div class="date-picker__day">17</div>
+              <div class="date-picker__day">18</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid grid-3">
+      <div class="card">
+        <div class="card__body">
+          <h4 class="card__title">Slider</h4>
+          <div class="slider" data-slider>
+            <div class="slider__track">
+              <div class="slider__slide">
+                <h4>Lightweight</h4>
+                <p>18KB gzipped bundle with zero dependencies.</p>
+              </div>
+              <div class="slider__slide">
+                <h4>Accessible</h4>
+                <p>WCAG-friendly patterns and focus management.</p>
+              </div>
+              <div class="slider__slide">
+                <h4>Customizable</h4>
+                <p>Override tokens via CSS variables to match your brand.</p>
+              </div>
+            </div>
+            <div class="slider__controls">
+              <button class="slider__btn" data-slider-prev aria-label="Previous">‹</button>
+              <button class="slider__btn" data-slider-next aria-label="Next">›</button>
+            </div>
+            <div class="slider__dots">
+              <button class="slider__dot is-active"></button>
+              <button class="slider__dot"></button>
+              <button class="slider__dot"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__body">
+          <h4 class="card__title">Gallery</h4>
+          <div class="gallery">
+            <div class="gallery__item"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=400&q=60" alt="Gallery 1"></div>
+            <div class="gallery__item"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=400&q=60" alt="Gallery 2"></div>
+            <div class="gallery__item"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=60" alt="Gallery 3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__body">
+          <h4 class="card__title">Rating</h4>
           <div class="rating">
             <span class="rating__star is-active">★</span>
             <span class="rating__star is-active">★</span>
@@ -138,15 +179,28 @@
           </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card__body">
-          <h4>Form with validation</h4>
-          <form data-validate>
-            <label class="form-label" for="name">Name</label>
-            <input class="form-control" id="name" required>
-            <div class="form-hint">Required field</div>
-            <button class="btn btn--primary btn--full-width" type="submit">Submit</button>
-          </form>
+    </section>
+
+    <section class="card card--interactive">
+      <div class="card__body">
+        <h4 class="card__title">Checkout</h4>
+        <div class="checkout">
+          <div class="checkout__steps">
+            <div class="checkout__step">
+              <h5>Contact</h5>
+              <input class="form-control" placeholder="you@example.com">
+            </div>
+            <div class="checkout__step">
+              <h5>Shipping</h5>
+              <input class="form-control" placeholder="Address">
+            </div>
+          </div>
+          <div class="checkout__summary">
+            <div class="checkout__line"><span>Subtotal</span><span>$120.00</span></div>
+            <div class="checkout__line"><span>Shipping</span><span>$10.00</span></div>
+            <div class="checkout__total"><span>Total</span><span>$130.00</span></div>
+            <button class="btn btn--primary btn--full-width mt-8">Pay now</button>
+          </div>
         </div>
       </div>
     </section>
@@ -173,6 +227,13 @@
     <div>Hubzz UI Kit • Built for fast static hosting</div>
   </footer>
 
+  <script>
+    // Force light mode by default on the docs page
+    document.documentElement.dataset.colorScheme = 'light';
+    document.body.classList.remove('dark');
+    document.body.classList.add('light');
+    try { localStorage.setItem('hubzz-theme', 'light'); } catch (e) {}
+  </script>
   <script src="/js/hubzz.js"></script>
 </body>
 </html>
