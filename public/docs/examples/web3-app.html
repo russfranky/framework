@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubzz UI Kit – Web3 Example</title>
+  <link rel="stylesheet" href="/css/hubzz.css">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div class="hero__title">Web3 Dashboard</div>
+      <div class="hero__subtitle">Wallet status, network badge, and transaction cards.</div>
+      <div class="btn-group">
+        <button class="btn btn--primary">Connect Wallet</button>
+        <button class="btn btn--outline" data-theme-toggle>Toggle theme</button>
+      </div>
+    </header>
+
+    <section class="grid grid-2">
+      <div class="card card--interactive">
+        <div class="card__body">
+          <h4>Wallet</h4>
+          <div class="status status--success">0x2943...19fB connected</div>
+          <p class="text-muted mt-8">Balance: 4.21 ETH</p>
+        </div>
+      </div>
+      <div class="card card--interactive">
+        <div class="card__body">
+          <h4>Network</h4>
+          <div class="tag tag--info"><span class="tag__dot"></span>Ethereum Mainnet</div>
+          <p class="text-muted mt-8">Block height: 19,292,330</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card card--interactive">
+      <div class="card__body">
+        <h4>Recent Transactions</h4>
+        <div class="checkout__line">
+          <span>Swap USDC → ETH</span>
+          <span class="tag tag--success"><span class="tag__dot"></span>Confirmed</span>
+        </div>
+        <div class="checkout__line">
+          <span>Bridge to L2</span>
+          <span class="tag tag--warning"><span class="tag__dot"></span>Pending</span>
+        </div>
+        <div class="checkout__line">
+          <span>Stake</span>
+          <span class="tag tag--info"><span class="tag__dot"></span>Queued</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="/js/hubzz.js"></script>
+</body>
+</html>

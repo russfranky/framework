@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubzz UI Kit – Showcase</title>
+  <link rel="stylesheet" href="/css/hubzz.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar__inner container">
+      <a class="navbar__brand" href="/docs/index.html">Hubzz UI Kit</a>
+      <nav class="navbar__links" id="navbarLinks">
+        <a class="navbar__link is-active" href="/docs/index.html">Showcase</a>
+        <a class="navbar__link" href="/docs/getting-started.html">Getting Started</a>
+        <a class="navbar__link" href="/docs/examples/basic.html">Examples</a>
+      </nav>
+      <div class="navbar__cta">
+        <button class="btn btn--outline" data-theme-toggle aria-label="Toggle theme">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero__title">Hubzz UI Kit</div>
+      <div class="hero__subtitle">Production-ready, dependency-free components with dark mode, responsive layout, and Web3-friendly patterns.</div>
+      <div class="btn-group">
+        <button class="btn btn--primary">Primary CTA</button>
+        <button class="btn btn--ghost" data-modal-target="#demoModal">Open Modal</button>
+      </div>
+    </section>
+
+    <section class="page-grid">
+      <div class="card card--interactive">
+        <div class="card__body">
+          <h4 class="card__title">Buttons</h4>
+          <div class="flex gap-8 items-center">
+            <button class="btn btn--primary">Primary</button>
+            <button class="btn btn--secondary">Secondary</button>
+            <button class="btn btn--danger btn--pill">Danger</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--interactive">
+        <div class="card__body">
+          <h4 class="card__title">Form Controls</h4>
+          <label class="form-label" for="email">Email</label>
+          <input class="form-control" id="email" type="email" placeholder="you@example.com" required>
+          <div class="form-hint">Built-in focus rings and states</div>
+        </div>
+      </div>
+
+      <div class="card card--interactive">
+        <div class="card__body">
+          <h4 class="card__title">Tabs</h4>
+          <div data-tabs>
+            <div class="btn-group">
+              <button class="btn btn--outline" data-tab="one">Overview</button>
+              <button class="btn btn--outline" data-tab="two">Details</button>
+              <button class="btn btn--outline" data-tab="three">Meta</button>
+            </div>
+            <div class="mt-8">
+              <div data-panel="one">Accessible tab interface with keyboard support.</div>
+              <div data-panel="two" hidden>Drop-in tabs that sync aria attributes.</div>
+              <div data-panel="three" hidden>Customize styles via CSS variables.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--interactive">
+        <div class="card__body">
+          <h4 class="card__title">Status</h4>
+          <div class="flex gap-8 items-center">
+            <span class="tag tag--success"><span class="tag__dot"></span>Live</span>
+            <span class="tag tag--warning"><span class="tag__dot"></span>Pending</span>
+            <span class="tag tag--error"><span class="tag__dot"></span>Error</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Slider</h3>
+      <div class="slider" data-slider>
+        <div class="slider__track">
+          <div class="slider__slide">
+            <h4>Lightweight</h4>
+            <p>18KB gzipped bundle with zero dependencies.</p>
+          </div>
+          <div class="slider__slide">
+            <h4>Accessible</h4>
+            <p>WCAG-friendly patterns and focus management.</p>
+          </div>
+          <div class="slider__slide">
+            <h4>Customizable</h4>
+            <p>Override tokens via CSS variables to match your brand.</p>
+          </div>
+        </div>
+        <div class="slider__controls">
+          <button class="slider__btn" data-slider-prev aria-label="Previous">‹</button>
+          <button class="slider__btn" data-slider-next aria-label="Next">›</button>
+        </div>
+        <div class="slider__dots">
+          <button class="slider__dot is-active"></button>
+          <button class="slider__dot"></button>
+          <button class="slider__dot"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid grid-3">
+      <div class="card">
+        <div class="card__body">
+          <h4>Dropdown</h4>
+          <div data-dropdown>
+            <button class="btn btn--secondary" data-dropdown-toggle>Open dropdown</button>
+            <div class="dropdown__menu">
+              <div class="dropdown__item">Item one</div>
+              <div class="dropdown__item">Item two</div>
+              <div class="dropdown__item">Item three</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__body">
+          <h4>Rating</h4>
+          <div class="rating">
+            <span class="rating__star is-active">★</span>
+            <span class="rating__star is-active">★</span>
+            <span class="rating__star is-active">★</span>
+            <span class="rating__star">★</span>
+            <span class="rating__star">★</span>
+            <span class="rating__value">3.0</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__body">
+          <h4>Form with validation</h4>
+          <form data-validate>
+            <label class="form-label" for="name">Name</label>
+            <input class="form-control" id="name" required>
+            <div class="form-hint">Required field</div>
+            <button class="btn btn--primary btn--full-width" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="demoModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <div class="modal__header">
+        <h3>Quick Modal</h3>
+        <button class="modal__close" data-modal-close="#demoModal" aria-label="Close">×</button>
+      </div>
+      <div class="modal__body">
+        Dependency-free modal driven by JavaScript helper.
+      </div>
+      <div class="modal__footer">
+        <button class="btn btn--secondary" data-modal-close="#demoModal">Close</button>
+        <button class="btn btn--primary">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer container">
+    <div>Hubzz UI Kit • Built for fast static hosting</div>
+  </footer>
+
+  <script src="/js/hubzz.js"></script>
+</body>
+</html>

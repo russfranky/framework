@@ -1,0 +1,42 @@
+/* Status chips */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-4) var(--space-10);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  background: var(--color-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.tag--success {
+  background: rgba(var(--color-success-rgb, 33, 128, 141), 0.12);
+  color: var(--color-success);
+  border-color: rgba(var(--color-success-rgb, 33, 128, 141), 0.2);
+}
+
+.tag--warning {
+  background: rgba(var(--color-warning-rgb, 168, 75, 47), 0.12);
+  color: var(--color-warning);
+  border-color: rgba(var(--color-warning-rgb, 168, 75, 47), 0.2);
+}
+
+.tag--error {
+  background: rgba(var(--color-error-rgb, 192, 21, 47), 0.12);
+  color: var(--color-error);
+  border-color: rgba(var(--color-error-rgb, 192, 21, 47), 0.2);
+}
+
+.tag--info {
+  background: rgba(var(--color-info-rgb, 98, 108, 113), 0.12);
+  color: var(--color-info);
+  border-color: rgba(var(--color-info-rgb, 98, 108, 113), 0.2);
+}
+
+.tag__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: currentColor;
+}

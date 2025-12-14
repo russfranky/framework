@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubzz UI Kit – Dashboard Example</title>
+  <link rel="stylesheet" href="/css/hubzz.css">
+</head>
+<body>
+  <main class="container">
+    <header class="flex justify-between items-center py-16">
+      <div>
+        <h1>Dashboard</h1>
+        <p class="text-muted">Sample analytics layout.</p>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn--outline" data-theme-toggle>Toggle theme</button>
+        <button class="btn btn--primary">New action</button>
+      </div>
+    </header>
+
+    <section class="grid grid-3">
+      <div class="card card--interactive">
+        <div class="card__body">
+          <div class="text-muted">Users</div>
+          <h2>12,430</h2>
+          <span class="status status--success">+4.2% MoM</span>
+        </div>
+      </div>
+      <div class="card card--interactive">
+        <div class="card__body">
+          <div class="text-muted">Revenue</div>
+          <h2>$184k</h2>
+          <span class="status status--info">Stable</span>
+        </div>
+      </div>
+      <div class="card card--interactive">
+        <div class="card__body">
+          <div class="text-muted">Failures</div>
+          <h2>0.21%</h2>
+          <span class="status status--error">Investigating</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card card--interactive">
+      <div class="card__body">
+        <div class="flex justify-between items-center mb-8">
+          <h3>Recent Activity</h3>
+          <div data-dropdown>
+            <button class="btn btn--secondary" data-dropdown-toggle>Filter</button>
+            <div class="dropdown__menu">
+              <div class="dropdown__item">All</div>
+              <div class="dropdown__item">Transactions</div>
+              <div class="dropdown__item">Payouts</div>
+            </div>
+          </div>
+        </div>
+        <div class="table">
+          <div class="table-row">
+            <div class="checkout__line"><span>New signup</span><span class="tag tag--success"><span class="tag__dot"></span>Active</span></div>
+            <div class="checkout__line"><span>Payment</span><span>$48.00</span></div>
+            <div class="checkout__line"><span>Refund</span><span class="tag tag--warning"><span class="tag__dot"></span>Manual</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="/js/hubzz.js"></script>
+</body>
+</html>

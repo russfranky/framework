@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubzz UI Kit – Basic Example</title>
+  <link rel="stylesheet" href="/css/hubzz.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card card--interactive">
+      <div class="card__body">
+        <h2 class="card__title">Basic Page</h2>
+        <p class="text-muted">Starter layout using Hubzz components.</p>
+        <div class="divider"></div>
+        <form class="form-inline" data-validate>
+          <div>
+            <label class="form-label" for="fullName">Full name</label>
+            <input class="form-control" id="fullName" placeholder="Ada Lovelace" required>
+          </div>
+          <div>
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" id="email" type="email" placeholder="ada@hubzz.app" required>
+          </div>
+          <div class="form__actions">
+            <button class="btn btn--outline" type="reset">Reset</button>
+            <button class="btn btn--primary" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="/js/hubzz.js"></script>
+</body>
+</html>

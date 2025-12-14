@@ -1,0 +1,44 @@
+/* Button variants & states */
+.btn--ghost {
+  background: transparent;
+  color: var(--color-text);
+  border: 1px dashed var(--color-border);
+}
+
+.btn--ghost:hover {
+  background: var(--color-secondary);
+}
+
+.btn--danger {
+  background: var(--color-error);
+  color: var(--color-btn-primary-text);
+}
+
+.btn--danger:hover {
+  background: var(--color-error-dark, var(--color-error));
+}
+
+.btn--pill {
+  border-radius: var(--radius-full);
+}
+
+.btn--icon {
+  gap: var(--space-6);
+}
+
+.btn__icon {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-group {
+  display: inline-flex;
+  gap: var(--space-6);
+}
+
+.btn-group .btn {
+  margin: 0;
+}
