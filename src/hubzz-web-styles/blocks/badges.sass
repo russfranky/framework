@@ -1,0 +1,27 @@
+.badge
+    display: inline-flex
+    align-items: center
+    gap: 6px
+    padding: 6px 10px
+    border-radius: 999px
+    font-weight: 700
+    font-size: 12px
+    letter-spacing: .03em
+    text-transform: uppercase
+    background: $n7
+    color: $n2
+    +dark-common
+        background: $n3
+        color: $n8
+
+@each $name, $tokens in (
+    primary: (rgba($p1, .14), $p1),
+    success: (rgba($p4, .18), #0F7B4B),
+    warning: (rgba($s4, .16), #8A4B00),
+    danger: (rgba(#F97066, .16), #B42318),
+    info: (rgba($p2, .16), #1849A9),
+    dark: ($n2, $n8)
+)
+    .badge-#{$name}
+        background: nth($tokens, 1)
+        color: nth($tokens, 2)

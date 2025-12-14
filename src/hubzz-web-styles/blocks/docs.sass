@@ -1,31 +1,44 @@
 .doc-page
-    background: linear-gradient(180deg, rgba($p1, 0.06) 0%, rgba($n8, 0) 32%), $n8
+    background: linear-gradient(140deg, rgba($p1, 0.08) 0%, rgba($p2, 0.05) 28%, rgba($n8, 0.6) 60%), $n8
     color: $n2
-    padding: 32px 0 96px
+    padding: 48px 0 120px
     +dark-body
         background: $n1
         color: $n8
 
 .doc-hero
-    margin-bottom: 48px
+    margin-bottom: 56px
+    position: relative
     .hero
         display: block
-        margin-bottom: 12px
+        margin-bottom: 14px
     .info
-        max-width: 680px
+        max-width: 720px
         color: $n4
+    &:after
+        content: ''
+        position: absolute
+        top: -32px
+        right: -64px
+        width: 180px
+        height: 180px
+        background: radial-gradient(circle, rgba($p1, 0.18) 0%, rgba($p1, 0) 60%)
+        filter: blur(18px)
+        pointer-events: none
+        +dark-common
+            opacity: 0.6
 
 .doc-section
     padding: 32px
     margin-bottom: 24px
-    border-radius: 24px
+    border-radius: 20px
     background: $n8
-    box-shadow: 0 10px 30px -20px rgba($n2, 0.25)
-    border: 1px solid rgba($n6, 0.8)
+    box-shadow: 0 18px 40px -24px rgba($n2, 0.4)
+    border: 1px solid rgba($n6, 0.9)
     +dark-common
         background: $n1
         border-color: $n3
-        box-shadow: 0 16px 40px -20px rgba(0, 0, 0, 0.4)
+        box-shadow: 0 18px 50px -28px rgba(0, 0, 0, 0.6)
     .h3
         margin-bottom: 8px
     .info
@@ -36,6 +49,11 @@
     gap: 12px
     flex-wrap: wrap
     align-items: center
+
+.doc-grid-2
+    display: grid
+    gap: 20px
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
 
 .doc-muted
     color: $n4
@@ -68,4 +86,3 @@
     background: rgba($n6, 0.9)
     +dark-common
         background: rgba($n3, 0.9)
-

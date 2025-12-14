@@ -1,0 +1,36 @@
+.table
+    width: 100%
+    border-collapse: separate
+    border-spacing: 0
+    background: $n8
+    border: 1px solid $n6
+    border-radius: 14px
+    overflow: hidden
+    box-shadow: 0 10px 28px -22px rgba($n2, .5)
+    +dark-common
+        background: $n1
+        border-color: $n3
+    th, td
+        padding: 14px 16px
+        text-align: left
+        border-bottom: 1px solid $n6
+        color: $n2
+        +dark-common
+            border-color: $n3
+            color: $n8
+    th
+        font-weight: 700
+        color: $n3
+        +dark-common
+            color: $n5
+    tr:last-child td
+        border-bottom: none
+
+.table-striped tbody tr:nth-child(odd)
+    background: $n7
+    +dark-common
+        background: $n2
+
+.table-hover tbody tr:hover
+    background: rgba($p1, .08)
+    transition: background .15s ease

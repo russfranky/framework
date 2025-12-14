@@ -3,54 +3,262 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hubzz UI Kit – Showcase</title>
+  <title>Hubzz UI Kit – Components</title>
   <link rel="stylesheet" href="/css/hubzz.css">
 </head>
 <body class="doc-page">
   <main class="container">
     <section class="doc-hero">
       <div class="doc-pill">Hubzz UI Kit</div>
-      <div class="hero">Hubzz UI Kit</div>
-      <div class="info">Production-ready styles compiled from the Sass bundle in <code>src/hubzz-web-styles/</code>.</div>
+      <div class="hero">Components</div>
+      <div class="info">Hubzz-styled, Bootstrap-grade surface area. All components ship in <code>public/css/hubzz.css</code> compiled from <code>src/hubzz-web-styles/</code>.</div>
     </section>
 
+    <div class="doc-grid-2">
+      <section class="doc-section">
+        <div class="h3">Buttons</div>
+        <p class="doc-muted">Primary, stroke, monochrome, small, and icon circles.</p>
+        <div class="doc-row">
+          <a class="button" href="#">Primary</a>
+          <a class="button-stroke" href="#">Stroke</a>
+          <a class="button-black" href="#">Black</a>
+          <a class="button-white" href="#">White</a>
+          <a class="button button-small" href="#">Small</a>
+          <button class="button-circle-stroke" aria-label="Icon button">○</button>
+        </div>
+      </section>
+
+      <section class="doc-section">
+        <div class="h3">Badges & Chips</div>
+        <p class="doc-muted">Status, category, and pill badges.</p>
+        <div class="doc-row">
+          <span class="status">Default</span>
+          <span class="status-black">Dark</span>
+          <span class="status-gray">Muted</span>
+          <span class="category">Category</span>
+          <span class="category-blue">Highlight</span>
+          <span class="badge badge-primary">New</span>
+          <span class="badge badge-success">Live</span>
+          <span class="badge badge-dark">Beta</span>
+        </div>
+      </section>
+    </div>
+
     <section class="doc-section">
-      <div class="h3">Buttons</div>
-      <p class="doc-muted">Button classes available in the current bundle.</p>
-      <div class="doc-row">
-        <a class="button" href="#">Primary</a>
-        <a class="button-stroke" href="#">Stroke</a>
-        <a class="button-black" href="#">Black</a>
-        <a class="button-white" href="#">White</a>
-        <a class="button button-small" href="#">Small</a>
-        <button class="button-circle-stroke" aria-label="Icon button">○</button>
+      <div class="h3">Forms</div>
+      <p class="doc-muted">Text inputs, selects, checkboxes, radios, switches, and input groups.</p>
+      <div class="doc-grid-2">
+        <div class="stack-md">
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" id="email" type="email" placeholder="you@hubzz.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="role">Role</label>
+            <select id="role" class="form-select">
+              <option>Admin</option>
+              <option>Moderator</option>
+              <option>Member</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <span class="input-addon">@</span>
+            <input class="form-control" type="text" placeholder="username">
+            <button class="button button-small" type="button">Check</button>
+          </div>
+        </div>
+        <div class="stack-md">
+          <label class="form-check form-radio">
+            <input type="radio" class="form-check-input" name="plan" checked>
+            <span class="form-check-label">Explorer</span>
+          </label>
+          <label class="form-check form-radio">
+            <input type="radio" class="form-check-input" name="plan">
+            <span class="form-check-label">Creator</span>
+          </label>
+          <label class="form-check">
+            <input type="checkbox" class="form-check-input" checked>
+            <span class="form-check-label">Send product updates</span>
+          </label>
+          <label class="form-switch">
+            <input type="checkbox" checked>
+            <span class="switch-track">
+              <span class="switch-thumb"></span>
+            </span>
+            <span>Dark mode</span>
+          </label>
+        </div>
       </div>
     </section>
 
     <section class="doc-section">
-      <div class="h3">Badges</div>
-      <p class="doc-muted">Use the status and category classes to label content.</p>
-      <div class="doc-row">
-        <span class="status">Default</span>
-        <span class="status-black">Dark</span>
-        <span class="status-gray">Muted</span>
-        <span class="category">Category</span>
-        <span class="category-blue">Highlight</span>
+      <div class="h3">Navigation</div>
+      <p class="doc-muted">Navbar, tabs, pills, breadcrumbs, and pagination.</p>
+      <div class="stack-md">
+        <nav class="navbar">
+          <div class="navbar-brand">Hubzz</div>
+          <ul class="nav">
+            <li><a class="nav-link active" href="#">Home</a></li>
+            <li><a class="nav-link" href="#">Docs</a></li>
+            <li><a class="nav-link" href="#">Components</a></li>
+          </ul>
+          <div class="navbar-actions">
+            <a class="button-stroke" href="#">Sign in</a>
+            <a class="button button-small" href="#">Get started</a>
+          </div>
+        </nav>
+
+        <div class="tabs">
+          <a class="tab active" href="#">Profile</a>
+          <a class="tab" href="#">Team</a>
+          <a class="tab" href="#">Billing</a>
+        </div>
+
+        <ul class="nav nav-pills">
+          <li><a class="nav-link active" href="#">Overview</a></li>
+          <li><a class="nav-link" href="#">Activity</a></li>
+          <li><a class="nav-link" href="#">Reports</a></li>
+        </ul>
+
+        <div class="breadcrumb">
+          <a href="#">Home</a><span>/</span><a href="#">Library</a><span>/</span><span>Data</span>
+        </div>
+
+        <div class="pagination">
+          <a class="page-link" href="#">‹</a>
+          <a class="page-link active" href="#">1</a>
+          <a class="page-link" href="#">2</a>
+          <a class="page-link" href="#">3</a>
+          <a class="page-link" href="#">›</a>
+        </div>
       </div>
     </section>
 
     <section class="doc-section">
-      <div class="h3">Layout & Typography</div>
-      <p class="doc-muted">Classes included: <code>container</code>, <code>section*</code>, <code>hero</code>, <code>h1</code>–<code>h4</code>, <code>info</code>, <code>stage</code>.</p>
-      <div class="doc-row">
-        <div class="stage">Stage Label</div>
-        <div class="stage-small">Stage Small</div>
+      <div class="h3">Cards & Content</div>
+      <p class="doc-muted">Card shells, tables, list layouts.</p>
+      <div class="card-grid">
+        <article class="card">
+          <header class="card-header u-between">
+            <span class="card-title">Revenue</span>
+            <span class="badge badge-success">+18%</span>
+          </header>
+          <div class="card-body stack-sm">
+            <div class="h4">$128,400</div>
+            <p class="doc-muted">Q2 snapshot across all zones.</p>
+            <div class="progress"><div class="progress-bar" style="width:64%"></div></div>
+          </div>
+        </article>
+        <article class="card">
+          <header class="card-header">Session Quality</header>
+          <div class="card-body">
+            <ul class="doc-list">
+              <li>Median dwell: 12m 44s</li>
+              <li>Avg. FPS: 92</li>
+              <li>AFK kicks: 3</li>
+            </ul>
+          </div>
+          <footer class="card-footer u-between">
+            <span class="doc-muted">Last 7 days</span>
+            <a class="button-stroke button-small" href="#">View</a>
+          </footer>
+        </article>
+        <article class="card">
+          <header class="card-header">Table</header>
+          <div class="card-body">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr><th>Name</th><th>Status</th><th>Score</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Rift Market</td><td><span class="badge badge-primary">Live</span></td><td>91</td></tr>
+                <tr><td>Atlas Pass</td><td><span class="badge badge-success">Ready</span></td><td>84</td></tr>
+                <tr><td>Flux Builder</td><td><span class="badge badge-warning">QA</span></td><td>72</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
       </div>
     </section>
 
     <section class="doc-section">
-      <div class="h3">Slider & Date Range Skins</div>
-      <p class="doc-muted">The CSS bundle ships styling hooks for Slick (<code>.slick-*</code>) and Airbnb date range pickers (<code>.DateRangePicker</code>/<code>.SingleDatePicker</code>). Bring your own JS/plugins to activate them.</p>
+      <div class="h3">Feedback</div>
+      <p class="doc-muted">Alerts, progress, spinners, dropdowns, tabs, accordions, and modals.</p>
+      <div class="doc-grid-2">
+        <div class="stack-md">
+          <div class="alert alert-primary"><span class="alert-title">Heads up</span> The Hubzz API will restart at 02:00 UTC.</div>
+          <div class="alert alert-success"><span class="alert-title">Synced</span> Assets are up to date.</div>
+          <div class="alert alert-warning"><span class="alert-title">Warning</span> Token refresh required.</div>
+        </div>
+        <div class="stack-md">
+          <div class="u-between">
+            <div class="progress" style="max-width: 220px;"><div class="progress-bar" style="width:52%"></div></div>
+            <div class="spinner" aria-label="Loading"></div>
+          </div>
+          <div class="dropdown open">
+            <button class="button-stroke dropdown-toggle">Dropdown</button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else</a>
+            </div>
+          </div>
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-header">What is Hubzz?</button>
+              <div class="accordion-body">A social entertainment platform with zones, properties, and live events.</div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">How do I theme?</button>
+              <div class="accordion-body">Use the palette tokens in <code>helpers.sass</code> and extend the blocks.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="doc-divider"></div>
+      <div class="doc-grid-2">
+        <div class="tabs">
+          <a class="tab active" href="#">Tab One</a>
+          <a class="tab" href="#">Tab Two</a>
+          <a class="tab" href="#">Tab Three</a>
+          <div class="tab-content doc-muted">Tab content sits here. Switch tabs by toggling the <code>.active</code> class.</div>
+        </div>
+        <div class="u-bg-panel u-flex u-between">
+          <div>
+            <div class="h4">Modal shell</div>
+            <p class="doc-muted">Use <code>.modal-overlay</code> + <code>.modal</code> for dialogs.</p>
+          </div>
+          <a class="button button-small" href="#">Open modal</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc-section">
+      <div class="h3">Layout & Utilities</div>
+      <p class="doc-muted">Containers, sections, stacks, grids, shadows, and typography tokens.</p>
+      <div class="doc-grid-2">
+        <div class="stack-md u-bg-panel">
+          <div class="section">Section default</div>
+          <div class="section-sm">Section small</div>
+          <div class="section-mini">Section mini</div>
+          <div class="stage">Stage Label</div>
+          <div class="stage-small">Stage Small</div>
+        </div>
+        <div class="stack-md">
+          <div class="u-bg-panel u-shadow stack-sm">
+            <div class="h2">Typography</div>
+            <div class="h3">Heading 3</div>
+            <div class="h4">Heading 4</div>
+            <p class="info">Info text</p>
+            <p class="doc-muted">Use <code>.stack-*</code>, <code>.grid-*</code>, <code>.u-bg-panel</code>, <code>.u-shadow</code>, and <code>.u-text-muted</code> to compose layouts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc-section">
+      <div class="h3">Plugin Skins</div>
+      <p class="doc-muted">Slick slider (<code>.slick-*</code>) and Airbnb date range picker (<code>.DateRangePicker</code>/<code>.SingleDatePicker</code>) skins ship with the bundle. Bring your own JS to activate them.</p>
     </section>
   </main>
 </body>

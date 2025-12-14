@@ -1,0 +1,80 @@
+.stack-sm
+    display: flex
+    flex-direction: column
+    gap: 8px
+
+.stack-md
+    display: flex
+    flex-direction: column
+    gap: 14px
+
+.stack-lg
+    display: flex
+    flex-direction: column
+    gap: 20px
+
+.grid-2
+    display: grid
+    gap: 16px
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
+
+.grid-3
+    display: grid
+    gap: 16px
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+
+.u-flex
+    display: flex
+    gap: 10px
+    align-items: center
+
+.u-between
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.u-justify-end
+    justify-content: flex-end
+
+.u-wrap
+    flex-wrap: wrap
+
+.u-shadow
+    box-shadow: 0 16px 40px -30px rgba($n2, .6)
+
+.u-rounded
+    border-radius: 14px
+
+.u-border
+    border: 1px solid $n6
+    +dark-common
+        border-color: $n3
+
+.u-pill
+    border-radius: 999px
+
+.u-text-muted
+    color: $n4
+
+.u-bg-ghost
+    background: $n7
+    +dark-common
+        background: $n2
+
+.u-bg-panel
+    background: $n8
+    border: 1px solid $n6
+    border-radius: 16px
+    padding: 18px
+    +dark-common
+        background: $n1
+        border-color: $n3
+
+.u-tag
+    display: inline-flex
+    align-items: center
+    padding: 4px 8px
+    border-radius: 10px
+    background: rgba($p1, .08)
+    color: $p1
+    font-weight: 700

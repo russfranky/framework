@@ -1,0 +1,40 @@
+.card
+    background: $n8
+    border: 1px solid $n6
+    border-radius: 18px
+    box-shadow: 0 20px 50px -34px rgba($n2, .55)
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    +dark-common
+        background: $n1
+        border-color: $n3
+        box-shadow: 0 20px 50px -34px rgba(0, 0, 0, 0.7)
+    .card-header,
+    .card-footer
+        padding: 16px 18px
+        font-weight: 700
+        color: $n2
+        +dark-common
+            color: $n8
+    .card-body
+        padding: 18px
+        color: $n3
+        +dark-common
+            color: $n5
+    .card-title
+        margin: 0 0 6px
+        font-weight: 700
+        color: $n2
+        +dark-common
+            color: $n8
+    .card-meta
+        font-size: 12px
+        letter-spacing: .02em
+        text-transform: uppercase
+        color: $n4
+
+.card-grid
+    display: grid
+    gap: 16px
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))

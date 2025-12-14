@@ -1,0 +1,36 @@
+.alert
+    position: relative
+    display: flex
+    align-items: flex-start
+    gap: 12px
+    padding: 14px 16px
+    border-radius: 14px
+    border: 1px solid $n6
+    background: rgba($n8, .9)
+    color: $n2
+    +dark-common
+        border-color: $n3
+        background: rgba($n1, .9)
+        color: $n8
+    .alert-title
+        font-weight: 700
+    .alert-close
+        margin-left: auto
+        background: none
+        border: none
+        padding: 4px
+        cursor: pointer
+        color: inherit
+
+@each $name, $tokens in (
+    primary: (rgba($p1, .12), $p1, rgba($p1, .2)),
+    success: (rgba($p4, .12), #067647, rgba($p4, .3)),
+    warning: (rgba($s4, .14), #8A4B00, rgba($s4, .3)),
+    danger: (rgba(#F97066, .14), #B42318, rgba(#F97066, .3)),
+    info: (rgba($p2, .14), #1849A9, rgba($p2, .3)),
+    neutral: (rgba($n6, .6), $n2, rgba($n6, .8))
+)
+    .alert-#{$name}
+        background: nth($tokens, 1)
+        color: nth($tokens, 2)
+        border-color: nth($tokens, 3)

@@ -1,0 +1,167 @@
+.form-group
+    margin-bottom: 16px
+
+.form-label
+    display: inline-flex
+    align-items: center
+    gap: 6px
+    margin-bottom: 8px
+    font-weight: 700
+    color: $n2
+    +dark-common
+        color: $n8
+
+.form-control,
+.form-select
+    width: 100%
+    height: 46px
+    padding: 12px 14px
+    border-radius: 12px
+    border: 1px solid $n6
+    background: $n8
+    color: $n2
+    transition: border-color .15s ease, box-shadow .15s ease, background .15s ease
+    +Inter
+    +dark-common
+        background: $n2
+        color: $n1
+        border-color: $n3
+    &::placeholder
+        color: $n4
+    &:focus
+        outline: none
+        border-color: $p1
+        box-shadow: 0 0 0 3px rgba($p1, .18)
+    &:disabled
+        background: $n7
+        color: $n4
+        cursor: not-allowed
+        +dark-common
+            background: $n3
+
+.form-control-sm
+    height: 40px
+    padding: 10px 12px
+    border-radius: 10px
+
+.form-textarea
+    min-height: 110px
+    resize: vertical
+
+.input-group
+    display: flex
+    align-items: stretch
+    gap: 8px
+    .input-addon
+        display: inline-flex
+        align-items: center
+        padding: 0 14px
+        border-radius: 12px
+        background: $n7
+        color: $n3
+        font-weight: 600
+        +dark-common
+            background: $n3
+            color: $n7
+    .form-control
+        flex: 1
+
+.form-check
+    display: flex
+    align-items: flex-start
+    gap: 10px
+    margin-bottom: 12px
+    .form-check-input
+        flex: 0 0 20px
+        width: 20px
+        height: 20px
+        margin-top: 2px
+        border-radius: 6px
+        border: 1.5px solid $n5
+        background: $n8
+        appearance: none
+        position: relative
+        transition: border-color .15s ease, background .15s ease, box-shadow .15s ease
+        &:checked
+            background: $p1
+            border-color: $p1
+            box-shadow: 0 4px 10px rgba($p1, .35)
+            &:after
+                content: ''
+                position: absolute
+                top: 4px
+                left: 7px
+                width: 6px
+                height: 10px
+                border: solid $n8
+                border-width: 0 2px 2px 0
+                transform: rotate(45deg)
+        &:focus
+            outline: none
+            box-shadow: 0 0 0 3px rgba($p1, .18)
+        &:disabled
+            cursor: not-allowed
+            opacity: .6
+    .form-check-label
+        color: $n2
+        line-height: 1.4
+        +dark-common
+            color: $n8
+
+.form-check-inline
+    display: inline-flex
+    align-items: center
+    margin-right: 16px
+
+.form-radio
+    .form-check-input
+        border-radius: 50%
+        &:checked
+            &:after
+                top: 5px
+                left: 5px
+                width: 8px
+                height: 8px
+                border-radius: 50%
+                background: $n8
+                border: none
+
+.form-switch
+    display: inline-flex
+    align-items: center
+    gap: 10px
+    cursor: pointer
+    .switch-track
+        position: relative
+        flex: 0 0 46px
+        width: 46px
+        height: 26px
+        border-radius: 18px
+        background: $n6
+        transition: background .15s ease
+    .switch-thumb
+        position: absolute
+        top: 3px
+        left: 3px
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        background: $n8
+        box-shadow: 0 6px 16px rgba(0,0,0,.12)
+        transition: transform .15s ease, background .15s ease
+    input
+        position: absolute
+        opacity: 0
+        pointer-events: none
+    input:checked + .switch-track
+        background: $p1
+        .switch-thumb
+            transform: translateX(20px)
+            background: $n8
+
+.form-select
+    appearance: none
+    background-image: linear-gradient(45deg, transparent 50%, $n4 50%), linear-gradient(135deg, $n4 50%, transparent 50%)
+    background-position: calc(100% - 18px) center, calc(100% - 12px) center
+    background-size: 6px 6px, 6px 6px
+    background-repeat: no-repeat
