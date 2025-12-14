@@ -8,45 +8,35 @@
 </head>
 <body>
   <main class="container">
-    <h1>Getting Started</h1>
-    <p class="text-muted">Deploy the Hubzz UI Kit in minutes.</p>
-
-    <section class="card card--interactive">
-      <div class="card__body">
-        <h3>Install</h3>
-        <div class="code-block"><code>npm install --save-dev esbuild cssnano</code></div>
-        <p>Build locally:</p>
-        <div class="code-block"><code>npm run build && npm run minify:css && npm run minify:js</code></div>
-      </div>
+    <section class="section">
+      <div class="hero">Getting Started</div>
+      <div class="info">Deploy the Hubzz UI Kit in minutes.</div>
     </section>
 
-    <section class="card card--interactive">
-      <div class="card__body">
-        <h3>Include via CDN</h3>
-        <div class="code-block"><code>&lt;link rel="stylesheet" href="/css/hubzz.min.css"&gt;</code></div>
-        <div class="code-block"><code>&lt;script src="/js/hubzz.min.js"&gt;&lt;/script&gt;</code></div>
-      </div>
+    <section class="section">
+      <div class="h3">Install</div>
+      <pre><code>npm install
+npm run build
+npm run minify:css
+npm run minify:js</code></pre>
     </section>
 
-    <section class="card card--interactive">
-      <div class="card__body">
-        <h3>Initialize</h3>
-        <p>Initialization is automatic. Use helpers as needed:</p>
-        <div class="code-block"><code>Hubzz.theme.toggle();<br>Hubzz.modal.open('#example');<br>Hubzz.tabs.activate('tab-1');</code></div>
-      </div>
+    <section class="section">
+      <div class="h3">Include</div>
+      <p>Reference the compiled assets:</p>
+      <pre><code>&lt;link rel="stylesheet" href="/css/hubzz.min.css"&gt;
+&lt;script src="/js/hubzz.min.js"&gt;&lt;/script&gt;</code></pre>
+      <p>Initialization is automatic for the helper scripts.</p>
     </section>
 
-    <section class="card card--interactive">
-      <div class="card__body">
-        <h3>Next Steps</h3>
-        <ul>
-          <li>Deploy to Vercel: <code>vercel</code></li>
-          <li>Version with git tags for CDN pinning</li>
-          <li>Customize tokens in <code>src/css/variables.css</code></li>
-        </ul>
-      </div>
+    <section class="section">
+      <div class="h3">Customize</div>
+      <ul>
+        <li>Edit Sass in <code>src/hubzz-web-styles/</code></li>
+        <li>Rebuild with <code>npm run build</code></li>
+        <li>Deploy to Vercel: <code>vercel</code></li>
+      </ul>
     </section>
   </main>
-  <script src="/js/hubzz.js"></script>
 </body>
 </html>

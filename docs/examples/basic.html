@@ -8,28 +8,31 @@
 </head>
 <body>
   <main class="container">
-    <section class="card card--interactive">
-      <div class="card__body">
-        <h2 class="card__title">Basic Page</h2>
-        <p class="text-muted">Starter layout using Hubzz components.</p>
-        <div class="divider"></div>
-        <form class="form-inline" data-validate>
-          <div>
-            <label class="form-label" for="fullName">Full name</label>
-            <input class="form-control" id="fullName" placeholder="Ada Lovelace" required>
-          </div>
-          <div>
-            <label class="form-label" for="email">Email</label>
-            <input class="form-control" id="email" type="email" placeholder="ada@hubzz.app" required>
-          </div>
-          <div class="form__actions">
-            <button class="btn btn--outline" type="reset">Reset</button>
-            <button class="btn btn--primary" type="submit">Submit</button>
-          </div>
-        </form>
+    <section class="section">
+      <div class="hero">Basic Example</div>
+      <div class="info">Minimal markup using the classes available in the current bundle.</div>
+    </section>
+
+    <section class="section">
+      <div class="h3">Buttons</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="button" href="#">Primary</a>
+        <a class="button-stroke" href="#">Stroke</a>
+        <a class="button-black" href="#">Black</a>
+        <a class="button-white" href="#">White</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="h3">Badges</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <span class="status">Default</span>
+        <span class="status-black">Dark</span>
+        <span class="status-gray">Muted</span>
+        <span class="category">Category</span>
+        <span class="category-blue">Highlight</span>
       </div>
     </section>
   </main>
-  <script src="/js/hubzz.js"></script>
 </body>
 </html>

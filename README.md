@@ -1,6 +1,6 @@
 # Hubzz UI Kit
 
-Lightweight, dependency-free UI kit with tokens, components, and utilities. Ships as prebuilt CSS/JS bundles plus HTML docs/examples for quick validation.
+Lightweight, dependency-free UI kit compiled from a single Sass entry. The current bundle includes layout primitives, typography, buttons, badges, categories, and slider/date-range skinning.
 
 ## Requirements
 - Node.js 18+
@@ -26,41 +26,29 @@ Reference the compiled bundle from your app or the included docs:
 <script src="/js/hubzz.min.js"></script>
 ```
 
-CDN-style include (after deploying the `public/` folder, e.g., to Vercel; project name/host can be anything):
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hubzz demo</title>
-    <link rel="stylesheet" href="https://YOUR-HOST/css/hubzz.min.css">
-  </head>
-  <body>
-    <h1 class="btn btn--primary">Hello, Hubzz!</h1>
-    <script src="https://YOUR-HOST/js/hubzz.min.js"></script>
-  </body>
-</html>
-```
-Replace `YOUR-HOST` with your deployment URL (e.g., `https://hubzz-kit.vercel.app` or any other project name you choose). JS auto-initializes components on load; no extra setup required.
+Replace the path with your deployment URL (e.g., Vercel). JS auto-initializes the small helper scripts; no extra setup required.
 
 ## Scripts
-- `build` – concatenate CSS/JS and copy docs to `public/`
+- `build` – compile Sass, bundle JS, copy docs to `public/`
 - `minify:css` – minify CSS bundle via esbuild
 - `minify:js` – minify JS bundle via esbuild
-- `deploy` – deploy with Vercel CLI (expects a configured account)
+- `deploy` – deploy with Vercel CLI
 - `clean` – remove generated assets in `public/`
 
 ## Project layout
 ```
-docs/            HTML showcase and examples
-public/          Built assets (generated)
-src/css/         Tokens, base styles, component CSS
-src/js/          Core utilities and component JS
+docs/                 HTML showcase and examples
+public/               Built assets (generated)
+src/hubzz-web-styles/ Sass entry + blocks (source of CSS)
+src/js/               Core utilities and component JS
 ```
 
-## Components included
-Buttons, forms, cards, modals, navigation, tabs, sliders, dropdowns, date picker, checkout, status badges, gallery, rating, utilities, and theme toggles.
+## Components included (CSS)
+- Buttons: `button`, `button-stroke`, `button-black`, `button-white`, `button-small`, `button-circle-stroke`
+- Badges: `status`, `status-black`, `status-gray`, categories `category`, `category-blue`
+- Layout/typography: `container`, `section*`, `hero`, `h1`–`h4`, `info`, `stage`
+- Slider skin: `.slick-*` classes (for use with Slick)
+- Date range skin: `.DateRangePicker` / `.SingleDatePicker` classes
 
 ## Deployment
 The repo is configured for static hosting via Vercel. Build, then run `vercel` to ship `public/`. Configure caching and headers in `vercel.json` as needed.

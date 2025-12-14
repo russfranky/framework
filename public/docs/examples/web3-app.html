@@ -8,50 +8,30 @@
 </head>
 <body>
   <main class="container">
-    <header class="hero">
-      <div class="hero__title">Web3 Dashboard</div>
-      <div class="hero__subtitle">Wallet status, network badge, and transaction cards.</div>
-      <div class="btn-group">
-        <button class="btn btn--primary">Connect Wallet</button>
-        <button class="btn btn--outline" data-theme-toggle>Toggle theme</button>
-      </div>
-    </header>
-
-    <section class="grid grid-2">
-      <div class="card card--interactive">
-        <div class="card__body">
-          <h4>Wallet</h4>
-          <div class="status status--success">0x2943...19fB connected</div>
-          <p class="text-muted mt-8">Balance: 4.21 ETH</p>
-        </div>
-      </div>
-      <div class="card card--interactive">
-        <div class="card__body">
-          <h4>Network</h4>
-          <div class="tag tag--info"><span class="tag__dot"></span>Ethereum Mainnet</div>
-          <p class="text-muted mt-8">Block height: 19,292,330</p>
-        </div>
-      </div>
+    <section class="section">
+      <div class="hero">Web3 Example</div>
+      <div class="info">Wallet + network badges using the available status/category classes.</div>
     </section>
 
-    <section class="card card--interactive">
-      <div class="card__body">
-        <h4>Recent Transactions</h4>
-        <div class="checkout__line">
-          <span>Swap USDC → ETH</span>
-          <span class="tag tag--success"><span class="tag__dot"></span>Confirmed</span>
-        </div>
-        <div class="checkout__line">
-          <span>Bridge to L2</span>
-          <span class="tag tag--warning"><span class="tag__dot"></span>Pending</span>
-        </div>
-        <div class="checkout__line">
-          <span>Stake</span>
-          <span class="tag tag--info"><span class="tag__dot"></span>Queued</span>
-        </div>
+    <section class="section">
+      <div class="h3">Wallet</div>
+      <span class="status">0x2943...19fB connected</span>
+      <p class="info">Balance: 4.21 ETH</p>
+    </section>
+
+    <section class="section">
+      <div class="h3">Network</div>
+      <span class="category-blue">Ethereum Mainnet</span>
+      <p class="info">Block height: 19,292,330</p>
+    </section>
+
+    <section class="section">
+      <div class="h3">Actions</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="button" href="#">Connect</a>
+        <a class="button-stroke" href="#">Toggle Theme</a>
       </div>
     </section>
   </main>
-  <script src="/js/hubzz.js"></script>
 </body>
 </html>

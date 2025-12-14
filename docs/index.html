@@ -7,233 +7,48 @@
   <link rel="stylesheet" href="/css/hubzz.css">
 </head>
 <body class="light">
-  <header class="navbar">
-    <div class="navbar__inner container">
-      <a class="navbar__brand" href="/docs/index.html">Hubzz UI Kit</a>
-      <nav class="navbar__links" id="navbarLinks">
-        <a class="navbar__link is-active" href="/docs/index.html">Showcase</a>
-        <a class="navbar__link" href="/docs/getting-started.html">Getting Started</a>
-        <a class="navbar__link" href="/docs/examples/basic.html">Examples</a>
-      </nav>
-      <div class="navbar__cta">
-        <button class="btn btn--outline" data-theme-toggle aria-label="Toggle theme">🌓</button>
-      </div>
-    </div>
-  </header>
-
   <main class="container">
-    <section class="hero">
-      <div class="hero__title">Hubzz UI Kit</div>
-      <div class="hero__subtitle">Production-ready, dependency-free components with dark mode, responsive layout, and Web3-friendly patterns.</div>
-      <div class="btn-group">
-        <button class="btn btn--primary">Primary CTA</button>
-        <button class="btn btn--ghost" data-modal-target="#demoModal">Open Modal</button>
+    <section class="section">
+      <div class="hero">Hubzz UI Kit</div>
+      <div class="info">Production-ready styles compiled from the Sass bundle in <code>src/hubzz-web-styles/</code>.</div>
+    </section>
+
+    <section class="section">
+      <div class="h3">Buttons</div>
+      <p>Button classes available in the current bundle.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="button" href="#">Primary</a>
+        <a class="button-stroke" href="#">Stroke</a>
+        <a class="button-black" href="#">Black</a>
+        <a class="button-white" href="#">White</a>
+        <a class="button button-small" href="#">Small</a>
+        <button class="button-circle-stroke" aria-label="Icon button">○</button>
       </div>
     </section>
 
-    <section class="grid grid-3">
-      <div class="card card--interactive">
-        <div class="card__body">
-          <h4 class="card__title">Buttons</h4>
-          <div class="flex gap-8 items-center">
-            <button class="btn btn--primary">Primary</button>
-            <button class="btn btn--secondary">Secondary</button>
-            <button class="btn btn--danger btn--pill">Danger</button>
-          </div>
-        </div>
-      </div>
-      <div class="card card--interactive">
-        <div class="card__body">
-          <h4 class="card__title">Form Controls</h4>
-          <label class="form-label" for="email">Email</label>
-          <input class="form-control" id="email" type="email" placeholder="you@example.com" required>
-          <div class="form-hint">Built-in focus rings and states</div>
-        </div>
-      </div>
-      <div class="card card--interactive">
-        <div class="card__body">
-          <h4 class="card__title">Tabs</h4>
-          <div data-tabs>
-            <div class="btn-group">
-              <button class="btn btn--outline" data-tab="one">Overview</button>
-              <button class="btn btn--outline" data-tab="two">Details</button>
-              <button class="btn btn--outline" data-tab="three">Meta</button>
-            </div>
-            <div class="mt-8">
-              <div data-panel="one">Accessible tab interface with keyboard support.</div>
-              <div data-panel="two" hidden>Drop-in tabs that sync aria attributes.</div>
-              <div data-panel="three" hidden>Customize styles via CSS variables.</div>
-            </div>
-          </div>
-        </div>
+    <section class="section">
+      <div class="h3">Badges</div>
+      <p>Use the status and category classes to label content.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <span class="status">Default</span>
+        <span class="status-black">Dark</span>
+        <span class="status-gray">Muted</span>
+        <span class="category">Category</span>
+        <span class="category-blue">Highlight</span>
       </div>
     </section>
 
-    <section class="grid grid-3">
-      <div class="card">
-        <div class="card__body">
-          <h4 class="card__title">Select & Dropdown</h4>
-          <label class="form-label" for="selectOne">Select</label>
-          <select id="selectOne" class="form-control">
-            <option>Option one</option>
-            <option>Option two</option>
-          </select>
-          <div class="divider"></div>
-          <div data-dropdown>
-            <button class="btn btn--secondary" data-dropdown-toggle>Open dropdown</button>
-            <div class="dropdown__menu">
-              <div class="dropdown__item">Item one</div>
-              <div class="dropdown__item">Item two</div>
-              <div class="dropdown__item">Item three</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card__body">
-          <h4 class="card__title">Status & Tags</h4>
-          <div class="flex gap-8 items-center">
-            <span class="tag tag--success"><span class="tag__dot"></span>Live</span>
-            <span class="tag tag--warning"><span class="tag__dot"></span>Pending</span>
-            <span class="tag tag--error"><span class="tag__dot"></span>Error</span>
-          </div>
-          <div class="mt-8">
-            <span class="status status--success">Success badge</span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card__body">
-          <h4 class="card__title">Date Picker (static)</h4>
-          <div class="date-picker">
-            <div class="date-picker__header">
-              <button class="btn btn--outline btn--sm">‹</button>
-              <div>September 2025</div>
-              <button class="btn btn--outline btn--sm">›</button>
-            </div>
-            <div class="date-picker__grid">
-              <div class="date-picker__day is-selected">12</div>
-              <div class="date-picker__day">13</div>
-              <div class="date-picker__day is-today">14</div>
-              <div class="date-picker__day">15</div>
-              <div class="date-picker__day">16</div>
-              <div class="date-picker__day">17</div>
-              <div class="date-picker__day">18</div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="section">
+      <div class="h3">Layout & Typography</div>
+      <p class="info">Classes included: <code>container</code>, <code>section*</code>, <code>hero</code>, <code>h1</code>–<code>h4</code>, <code>info</code>, <code>stage</code>.</p>
+      <div class="stage">Stage Label</div>
+      <div class="stage-small">Stage Small</div>
     </section>
 
-    <section class="grid grid-3">
-      <div class="card">
-        <div class="card__body">
-          <h4 class="card__title">Slider</h4>
-          <div class="slider" data-slider>
-            <div class="slider__track">
-              <div class="slider__slide">
-                <h4>Lightweight</h4>
-                <p>18KB gzipped bundle with zero dependencies.</p>
-              </div>
-              <div class="slider__slide">
-                <h4>Accessible</h4>
-                <p>WCAG-friendly patterns and focus management.</p>
-              </div>
-              <div class="slider__slide">
-                <h4>Customizable</h4>
-                <p>Override tokens via CSS variables to match your brand.</p>
-              </div>
-            </div>
-            <div class="slider__controls">
-              <button class="slider__btn" data-slider-prev aria-label="Previous">‹</button>
-              <button class="slider__btn" data-slider-next aria-label="Next">›</button>
-            </div>
-            <div class="slider__dots">
-              <button class="slider__dot is-active"></button>
-              <button class="slider__dot"></button>
-              <button class="slider__dot"></button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card__body">
-          <h4 class="card__title">Gallery</h4>
-          <div class="gallery">
-            <div class="gallery__item"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=400&q=60" alt="Gallery 1"></div>
-            <div class="gallery__item"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=400&q=60" alt="Gallery 2"></div>
-            <div class="gallery__item"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=60" alt="Gallery 3"></div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card__body">
-          <h4 class="card__title">Rating</h4>
-          <div class="rating">
-            <span class="rating__star is-active">★</span>
-            <span class="rating__star is-active">★</span>
-            <span class="rating__star is-active">★</span>
-            <span class="rating__star">★</span>
-            <span class="rating__star">★</span>
-            <span class="rating__value">3.0</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="card card--interactive">
-      <div class="card__body">
-        <h4 class="card__title">Checkout</h4>
-        <div class="checkout">
-          <div class="checkout__steps">
-            <div class="checkout__step">
-              <h5>Contact</h5>
-              <input class="form-control" placeholder="you@example.com">
-            </div>
-            <div class="checkout__step">
-              <h5>Shipping</h5>
-              <input class="form-control" placeholder="Address">
-            </div>
-          </div>
-          <div class="checkout__summary">
-            <div class="checkout__line"><span>Subtotal</span><span>$120.00</span></div>
-            <div class="checkout__line"><span>Shipping</span><span>$10.00</span></div>
-            <div class="checkout__total"><span>Total</span><span>$130.00</span></div>
-            <button class="btn btn--primary btn--full-width mt-8">Pay now</button>
-          </div>
-        </div>
-      </div>
+    <section class="section">
+      <div class="h3">Slider & Date Range Skins</div>
+      <p>The CSS bundle ships styling hooks for Slick (<code>.slick-*</code>) and Airbnb date range pickers (<code>.DateRangePicker</code>/<code>.SingleDatePicker</code>). Bring your own JS/plugins to activate them.</p>
     </section>
   </main>
-
-  <div class="modal" id="demoModal" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal__overlay"></div>
-    <div class="modal__content">
-      <div class="modal__header">
-        <h3>Quick Modal</h3>
-        <button class="modal__close" data-modal-close="#demoModal" aria-label="Close">×</button>
-      </div>
-      <div class="modal__body">
-        Dependency-free modal driven by JavaScript helper.
-      </div>
-      <div class="modal__footer">
-        <button class="btn btn--secondary" data-modal-close="#demoModal">Close</button>
-        <button class="btn btn--primary">Confirm</button>
-      </div>
-    </div>
-  </div>
-
-  <footer class="footer container">
-    <div>Hubzz UI Kit • Built for fast static hosting</div>
-  </footer>
-
-  <script>
-    // Force light mode by default on the docs page
-    document.documentElement.dataset.colorScheme = 'light';
-    document.body.classList.remove('dark');
-    document.body.classList.add('light');
-    try { localStorage.setItem('hubzz-theme', 'light'); } catch (e) {}
-  </script>
-  <script src="/js/hubzz.js"></script>
 </body>
 </html>

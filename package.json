@@ -15,7 +15,7 @@
   "license": "MIT",
   "scripts": {
     "build": "npm run build:css && npm run build:js && npm run build:docs",
-    "build:css": "cat src/css/variables.css src/css/base.css src/css/animations.css src/css/components/*.css > public/css/hubzz.css",
+    "build:css": "npx sass --no-source-map src/hubzz-web-styles/app.sass public/css/hubzz.css",
     "build:js": "cat src/js/core.js src/js/components/*.js src/js/index.js > public/js/hubzz.js",
     "build:docs": "mkdir -p public/docs && cp -R docs/* public/docs/",
     "minify:css": "npx esbuild public/css/hubzz.css --minify --outfile=public/css/hubzz.min.css",
@@ -26,7 +26,8 @@
     "postinstall": "node node_modules/esbuild/install.js"
   },
   "devDependencies": {
-    "esbuild": "^0.19.0"
+    "esbuild": "^0.19.0",
+    "sass": "^1.62.0"
   },
   "files": [
     "public/",
