@@ -22,7 +22,8 @@
     "minify:js": "npx esbuild public/js/hubzz.js --minify --outfile=public/js/hubzz.min.js",
     "start": "vercel dev",
     "deploy": "vercel",
-    "clean": "rm -rf public/css/hubzz.css public/css/hubzz.min.css public/js/hubzz.js public/js/hubzz.min.js public/docs"
+    "clean": "rm -rf public/css/hubzz.css public/css/hubzz.min.css public/js/hubzz.js public/js/hubzz.min.js public/docs",
+    "postinstall": "node node_modules/esbuild/install.js"
   },
   "devDependencies": {
     "esbuild": "^0.19.0"
