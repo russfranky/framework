@@ -6,14 +6,15 @@
   <title>Hubzz UI Kit – Getting Started</title>
   <link rel="stylesheet" href="/css/hubzz.css">
 </head>
-<body>
+<body class="doc-page">
   <main class="container">
-    <section class="section">
+    <section class="doc-hero">
+      <div class="doc-pill">Setup</div>
       <div class="hero">Getting Started</div>
       <div class="info">Deploy the Hubzz UI Kit in minutes.</div>
     </section>
 
-    <section class="section">
+    <section class="doc-section">
       <div class="h3">Install</div>
       <pre><code>npm install
 npm run build
@@ -21,17 +22,17 @@ npm run minify:css
 npm run minify:js</code></pre>
     </section>
 
-    <section class="section">
+    <section class="doc-section">
       <div class="h3">Include</div>
-      <p>Reference the compiled assets:</p>
+      <p class="doc-muted">Reference the compiled assets:</p>
       <pre><code>&lt;link rel="stylesheet" href="/css/hubzz.min.css"&gt;
 &lt;script src="/js/hubzz.min.js"&gt;&lt;/script&gt;</code></pre>
-      <p>Initialization is automatic for the helper scripts.</p>
+      <p class="doc-muted">Initialization is automatic for the helper scripts.</p>
     </section>
 
-    <section class="section">
+    <section class="doc-section">
       <div class="h3">Customize</div>
-      <ul>
+      <ul class="doc-list">
         <li>Edit Sass in <code>src/hubzz-web-styles/</code></li>
         <li>Rebuild with <code>npm run build</code></li>
         <li>Deploy to Vercel: <code>vercel</code></li>
