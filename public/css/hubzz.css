@@ -95,6 +95,14 @@ body {
   color: #FCFDFE;
 }
 
+/* Ensure the page background and text color apply when dark mode is toggled
+   on root, html, or body. Uses !important to override competing rules. */
+:root.dark-mode, html.dark-mode, .dark-mode, body.dark-mode, .dark-mode body,
+[data-color-scheme="dark"], [data-color-scheme="dark"] body {
+  background: #181B1F !important;
+  color: #FCFDFE !important;
+}
+
 a {
   text-decoration: none;
 }
