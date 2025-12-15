@@ -286,14 +286,21 @@
   const Hubzz = window.Hubzz || {};
   const storageKey = 'hubzz-theme';
   const root = document.documentElement;
+  const body = document.body;
 
   const prefersDark = () => window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   const applyTheme = (theme) => {
     const next = theme || (prefersDark() ? 'dark' : 'light');
     root.dataset.colorScheme = next;
-    document.body.classList.remove('light', 'dark');
-    document.body.classList.add(next);
+    root.classList.toggle('dark-mode', next === 'dark');
+    root.classList.toggle('light-mode', next === 'light');
+    if (body) {
+      body.classList.remove('light', 'dark');
+      body.classList.add(next);
+      body.classList.toggle('dark-mode', next === 'dark');
+      body.classList.toggle('light-mode', next === 'light');
+    }
     try {
       localStorage.setItem(storageKey, next);
     } catch (err) {

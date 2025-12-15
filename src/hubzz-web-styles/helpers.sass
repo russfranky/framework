@@ -169,13 +169,13 @@ $n8: #FCFDFE
 
 // theme
 =dark
-    @at-root :global(.dark-mode) &
+    @at-root :global(.dark-mode) &, :global([data-color-scheme="dark"]) &
         @content
 
 =dark-body
-    @at-root .dark-mode
+    @at-root :global(.dark-mode), :global([data-color-scheme="dark"])
         @content
 
 =dark-common
-    @at-root .dark-mode &
+    @at-root :global(.dark-mode) &, :global([data-color-scheme="dark"]) &
         @content

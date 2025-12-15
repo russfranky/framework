@@ -90,7 +90,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #24262B;
 }
-.dark-mode {
+:global(.dark-mode), :global([data-color-scheme="dark"]) {
   background: #181B1F;
   color: #FCFDFE;
 }
@@ -221,7 +221,7 @@ img {
 .section-bg {
   background: #F1F5F9;
 }
-.dark-mode .section-bg {
+:global(.dark-mode) .section-bg, :global([data-color-scheme="dark"]) .section-bg {
   background: none;
   box-shadow: inset 0 1px 0 #24262B;
 }
@@ -354,11 +354,11 @@ img {
 .button-stroke svg {
   fill: #24262B;
 }
-.dark-mode .button-stroke {
+:global(.dark-mode) .button-stroke, :global([data-color-scheme="dark"]) .button-stroke {
   box-shadow: 0 0 0 1px #464F55 inset;
   color: #FCFCFD;
 }
-.dark-mode .button-stroke svg {
+:global(.dark-mode) .button-stroke svg, :global([data-color-scheme="dark"]) .button-stroke svg {
   fill: #FCFCFD;
 }
 
@@ -370,7 +370,7 @@ img {
 .button-stroke:hover svg, .button-stroke.active svg {
   fill: #FCFDFE;
 }
-.dark-mode .button-stroke:hover, .dark-mode .button-stroke.active {
+:global(.dark-mode) .button-stroke:hover, :global([data-color-scheme="dark"]) .button-stroke:hover, :global(.dark-mode) .button-stroke.active, :global([data-color-scheme="dark"]) .button-stroke.active {
   background: #393E44;
   box-shadow: 0 0 0 2px #393E44 inset;
 }
@@ -381,10 +381,10 @@ img {
 .button-black:hover, .button-black.active {
   background: #24262B;
 }
-.dark-mode .button-black {
+:global(.dark-mode) .button-black, :global([data-color-scheme="dark"]) .button-black {
   box-shadow: inset 0 0 0 2px #393E44;
 }
-.dark-mode .button-black:hover, .dark-mode .button-black.active {
+:global(.dark-mode) .button-black:hover, :global(.dark-mode) .button-black.active, :global([data-color-scheme="dark"]) .button-black:hover, :global([data-color-scheme="dark"]) .button-black.active {
   background: #393E44;
 }
 
@@ -426,10 +426,10 @@ img {
 .button-circle-stroke:hover svg {
   fill: #FCFDFE;
 }
-.dark-mode .button-circle-stroke {
+:global(.dark-mode) .button-circle-stroke, :global([data-color-scheme="dark"]) .button-circle-stroke {
   box-shadow: 0 0 0 2px #393E44 inset;
 }
-.dark-mode .button-circle-stroke:hover {
+:global(.dark-mode) .button-circle-stroke:hover, :global([data-color-scheme="dark"]) .button-circle-stroke:hover {
   background: #393E44;
 }
 
@@ -450,7 +450,7 @@ img {
   text-transform: uppercase;
   color: #393E44;
 }
-.dark-mode [class^=status] {
+:global(.dark-mode) [class^=status], :global([data-color-scheme="dark"]) [class^=status] {
   background: #393E44;
   color: #E3E9EE;
 }
@@ -459,7 +459,7 @@ img {
   background: #24262B;
   color: #FCFDFE;
 }
-.dark-mode .status-black {
+:global(.dark-mode) .status-black, :global([data-color-scheme="dark"]) .status-black {
   background: #FCFDFE;
   box-shadow: 0px 8px 16px -8px rgba(15, 15, 15, 0.1);
   color: #24262B;
@@ -469,7 +469,7 @@ img {
   background: #F1F5F9;
   color: #ADBAC5;
 }
-.dark-mode .status-gray {
+:global(.dark-mode) .status-gray, :global([data-color-scheme="dark"]) .status-gray {
   background: #181B1F;
   color: #ADBAC5;
 }
@@ -608,10 +608,10 @@ img {
 .slick-arrow:hover {
   box-shadow: inset 0 0 0 2px #E3E9EE;
 }
-.dark-mode .slick-arrow:hover {
+:global(.dark-mode) .slick-arrow:hover, :global([data-color-scheme="dark"]) .slick-arrow:hover {
   box-shadow: inset 0 0 0 2px #393E44;
 }
-.dark-mode .slick-arrow:hover svg {
+:global(.dark-mode) .slick-arrow:hover svg, :global([data-color-scheme="dark"]) .slick-arrow:hover svg {
   fill: #E3E9EE;
 }
 
@@ -676,7 +676,7 @@ img {
 .travel-slider .slick-arrow svg {
   fill: #FCFDFE;
 }
-.dark-mode .travel-slider .slick-arrow:hover {
+:global(.dark-mode) .travel-slider .slick-arrow:hover, :global([data-color-scheme="dark"]) .travel-slider .slick-arrow:hover {
   box-shadow: inset 0 0 0 2px #E3E9EE;
 }
 
@@ -1108,7 +1108,7 @@ img {
 .topics-slider .slick-arrow:hover svg {
   fill: #24262B;
 }
-.dark-mode .topics-slider .slick-arrow:hover svg {
+:global(.dark-mode) .topics-slider .slick-arrow:hover svg, :global([data-color-scheme="dark"]) .topics-slider .slick-arrow:hover svg {
   fill: #FCFDFE;
 }
 
@@ -1361,12 +1361,14 @@ img {
 .SingleDatePicker .DateInput_input::placeholder {
   color: #24262B;
 }
-.dark-mode .DateRangePicker .DateInput_input,
-.dark-mode .SingleDatePicker .DateInput_input {
+:global(.dark-mode) .DateRangePicker .DateInput_input, :global([data-color-scheme="dark"]) .DateRangePicker .DateInput_input,
+:global(.dark-mode) .SingleDatePicker .DateInput_input,
+:global([data-color-scheme="dark"]) .SingleDatePicker .DateInput_input {
   color: #FCFDFE;
 }
-.dark-mode .DateRangePicker .DateInput_input::placeholder,
-.dark-mode .SingleDatePicker .DateInput_input::placeholder {
+:global(.dark-mode) .DateRangePicker .DateInput_input::placeholder, :global([data-color-scheme="dark"]) .DateRangePicker .DateInput_input::placeholder,
+:global(.dark-mode) .SingleDatePicker .DateInput_input::placeholder,
+:global([data-color-scheme="dark"]) .SingleDatePicker .DateInput_input::placeholder {
   color: #FCFDFE;
 }
 
@@ -1384,13 +1386,15 @@ img {
     color: #735FFA;
   }
 }
-.dark-mode .DateRangePicker .DateInput_input.DateInput_input__focused,
-.dark-mode .SingleDatePicker .DateInput_input.DateInput_input__focused {
+:global(.dark-mode) .DateRangePicker .DateInput_input.DateInput_input__focused, :global([data-color-scheme="dark"]) .DateRangePicker .DateInput_input.DateInput_input__focused,
+:global(.dark-mode) .SingleDatePicker .DateInput_input.DateInput_input__focused,
+:global([data-color-scheme="dark"]) .SingleDatePicker .DateInput_input.DateInput_input__focused {
   background: #181B1F;
 }
 @media only screen and (max-width: 1023px) {
-  .dark-mode .DateRangePicker .DateInput_input.DateInput_input__focused,
-  .dark-mode .SingleDatePicker .DateInput_input.DateInput_input__focused {
+  :global(.dark-mode) .DateRangePicker .DateInput_input.DateInput_input__focused, :global([data-color-scheme="dark"]) .DateRangePicker .DateInput_input.DateInput_input__focused,
+  :global(.dark-mode) .SingleDatePicker .DateInput_input.DateInput_input__focused,
+  :global([data-color-scheme="dark"]) .SingleDatePicker .DateInput_input.DateInput_input__focused {
     background: none;
   }
 }
@@ -1412,10 +1416,13 @@ img {
     bottom: 100% !important;
   }
 }
-.dark-mode .DateRangePicker .DateRangePicker_picker,
-.dark-mode .DateRangePicker .SingleDatePicker_picker,
-.dark-mode .SingleDatePicker .DateRangePicker_picker,
-.dark-mode .SingleDatePicker .SingleDatePicker_picker {
+:global(.dark-mode) .DateRangePicker .DateRangePicker_picker, :global([data-color-scheme="dark"]) .DateRangePicker .DateRangePicker_picker,
+:global(.dark-mode) .DateRangePicker .SingleDatePicker_picker,
+:global([data-color-scheme="dark"]) .DateRangePicker .SingleDatePicker_picker,
+:global(.dark-mode) .SingleDatePicker .DateRangePicker_picker,
+:global([data-color-scheme="dark"]) .SingleDatePicker .DateRangePicker_picker,
+:global(.dark-mode) .SingleDatePicker .SingleDatePicker_picker,
+:global([data-color-scheme="dark"]) .SingleDatePicker .SingleDatePicker_picker {
   background: #181B1F;
 }
 
@@ -1437,8 +1444,9 @@ img {
     box-shadow: 0px 16px 32px rgba(15, 15, 15, 0.12);
   }
 }
-.dark-mode .DateRangePicker .DayPicker__withBorder,
-.dark-mode .SingleDatePicker .DayPicker__withBorder {
+:global(.dark-mode) .DateRangePicker .DayPicker__withBorder, :global([data-color-scheme="dark"]) .DateRangePicker .DayPicker__withBorder,
+:global(.dark-mode) .SingleDatePicker .DayPicker__withBorder,
+:global([data-color-scheme="dark"]) .SingleDatePicker .DayPicker__withBorder {
   background: #181B1F;
 }
 
@@ -1475,8 +1483,9 @@ img {
   font-weight: 500;
   color: #24262B;
 }
-.dark-mode .DateRangePicker .CalendarMonth_caption,
-.dark-mode .SingleDatePicker .CalendarMonth_caption {
+:global(.dark-mode) .DateRangePicker .CalendarMonth_caption, :global([data-color-scheme="dark"]) .DateRangePicker .CalendarMonth_caption,
+:global(.dark-mode) .SingleDatePicker .CalendarMonth_caption,
+:global([data-color-scheme="dark"]) .SingleDatePicker .CalendarMonth_caption {
   color: #F1F5F9;
 }
 
@@ -1501,8 +1510,9 @@ img {
   color: #24262B;
   transition: all 0.2s;
 }
-.dark-mode .DateRangePicker .CalendarDay,
-.dark-mode .SingleDatePicker .CalendarDay {
+:global(.dark-mode) .DateRangePicker .CalendarDay, :global([data-color-scheme="dark"]) .DateRangePicker .CalendarDay,
+:global(.dark-mode) .SingleDatePicker .CalendarDay,
+:global([data-color-scheme="dark"]) .SingleDatePicker .CalendarDay {
   color: #F1F5F9;
 }
 
@@ -1530,12 +1540,17 @@ img {
   background: #24262B;
   color: #FCFDFE;
 }
-.dark-mode .DateRangePicker .CalendarDay__selected,
-.dark-mode .DateRangePicker .CalendarDay__selected:hover,
-.dark-mode .DateRangePicker .CalendarDay__selected:active,
-.dark-mode .SingleDatePicker .CalendarDay__selected,
-.dark-mode .SingleDatePicker .CalendarDay__selected:hover,
-.dark-mode .SingleDatePicker .CalendarDay__selected:active {
+:global(.dark-mode) .DateRangePicker .CalendarDay__selected, :global([data-color-scheme="dark"]) .DateRangePicker .CalendarDay__selected,
+:global(.dark-mode) .DateRangePicker .CalendarDay__selected:hover,
+:global([data-color-scheme="dark"]) .DateRangePicker .CalendarDay__selected:hover,
+:global(.dark-mode) .DateRangePicker .CalendarDay__selected:active,
+:global([data-color-scheme="dark"]) .DateRangePicker .CalendarDay__selected:active,
+:global(.dark-mode) .SingleDatePicker .CalendarDay__selected,
+:global([data-color-scheme="dark"]) .SingleDatePicker .CalendarDay__selected,
+:global(.dark-mode) .SingleDatePicker .CalendarDay__selected:hover,
+:global([data-color-scheme="dark"]) .SingleDatePicker .CalendarDay__selected:hover,
+:global(.dark-mode) .SingleDatePicker .CalendarDay__selected:active,
+:global([data-color-scheme="dark"]) .SingleDatePicker .CalendarDay__selected:active {
   background: #FCFDFE;
   color: #24262B;
 }
@@ -1550,14 +1565,21 @@ img {
 .SingleDatePicker .CalendarDay__selected_span:hover {
   background: #E3E9EE;
 }
-.dark-mode .DateRangePicker .CalendarDay__hovered_span,
-.dark-mode .DateRangePicker .CalendarDay__hovered_span:hover,
-.dark-mode .DateRangePicker .CalendarDay__selected_span,
-.dark-mode .DateRangePicker .CalendarDay__selected_span:hover,
-.dark-mode .SingleDatePicker .CalendarDay__hovered_span,
-.dark-mode .SingleDatePicker .CalendarDay__hovered_span:hover,
-.dark-mode .SingleDatePicker .CalendarDay__selected_span,
-.dark-mode .SingleDatePicker .CalendarDay__selected_span:hover {
+:global(.dark-mode) .DateRangePicker .CalendarDay__hovered_span, :global([data-color-scheme="dark"]) .DateRangePicker .CalendarDay__hovered_span,
+:global(.dark-mode) .DateRangePicker .CalendarDay__hovered_span:hover,
+:global([data-color-scheme="dark"]) .DateRangePicker .CalendarDay__hovered_span:hover,
+:global(.dark-mode) .DateRangePicker .CalendarDay__selected_span,
+:global([data-color-scheme="dark"]) .DateRangePicker .CalendarDay__selected_span,
+:global(.dark-mode) .DateRangePicker .CalendarDay__selected_span:hover,
+:global([data-color-scheme="dark"]) .DateRangePicker .CalendarDay__selected_span:hover,
+:global(.dark-mode) .SingleDatePicker .CalendarDay__hovered_span,
+:global([data-color-scheme="dark"]) .SingleDatePicker .CalendarDay__hovered_span,
+:global(.dark-mode) .SingleDatePicker .CalendarDay__hovered_span:hover,
+:global([data-color-scheme="dark"]) .SingleDatePicker .CalendarDay__hovered_span:hover,
+:global(.dark-mode) .SingleDatePicker .CalendarDay__selected_span,
+:global([data-color-scheme="dark"]) .SingleDatePicker .CalendarDay__selected_span,
+:global(.dark-mode) .SingleDatePicker .CalendarDay__selected_span:hover,
+:global([data-color-scheme="dark"]) .SingleDatePicker .CalendarDay__selected_span:hover {
   color: #24262B;
 }
 
@@ -1670,7 +1692,7 @@ img {
   border: 1px solid rgba(57, 62, 68, 0.7);
   color: #FCFDFE;
 }
-.dark-mode .doc-section {
+:global(.dark-mode) .doc-section, :global([data-color-scheme="dark"]) .doc-section {
   background: #24262B;
   border-color: #393E44;
 }
@@ -1682,7 +1704,7 @@ img {
   margin-bottom: 14px;
   color: #ADBAC5;
 }
-.dark-mode .doc-section .info {
+:global(.dark-mode) .doc-section .info, :global([data-color-scheme="dark"]) .doc-section .info {
   color: #C7D2DA;
 }
 
@@ -1715,7 +1737,7 @@ img {
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-.dark-mode .doc-pill {
+:global(.dark-mode) .doc-pill, :global([data-color-scheme="dark"]) .doc-pill {
   background: rgba(115, 95, 250, 0.18);
 }
 
@@ -1728,7 +1750,7 @@ img {
   margin-bottom: 6px;
   color: #ADBAC5;
 }
-.dark-mode .doc-list li {
+:global(.dark-mode) .doc-list li, :global([data-color-scheme="dark"]) .doc-list li {
   color: #C7D2DA;
 }
 
@@ -1737,7 +1759,7 @@ img {
   margin: 24px 0;
   background: rgba(227, 233, 238, 0.9);
 }
-.dark-mode .doc-divider {
+:global(.dark-mode) .doc-divider, :global([data-color-scheme="dark"]) .doc-divider {
   background: rgba(57, 62, 68, 0.9);
 }
 
@@ -1751,7 +1773,7 @@ pre {
   line-height: 1.5;
   overflow: auto;
 }
-.dark-mode pre {
+:global(.dark-mode) pre, :global([data-color-scheme="dark"]) pre {
   background: #181B1F;
   border-color: #393E44;
 }
@@ -1764,7 +1786,7 @@ code {
   border-radius: 8px;
   border: 1px solid rgba(132, 202, 255, 0.18);
 }
-.dark-mode code {
+:global(.dark-mode) code, :global([data-color-scheme="dark"]) code {
   background: rgba(132, 202, 255, 0.12);
 }
 
@@ -1780,7 +1802,7 @@ code {
   font-weight: 700;
   color: #24262B;
 }
-.dark-mode .form-label {
+:global(.dark-mode) .form-label, :global([data-color-scheme="dark"]) .form-label {
   color: #FCFDFE;
 }
 
@@ -1796,8 +1818,9 @@ code {
   transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
   font-family: "Inter", sans-serif;
 }
-.dark-mode .form-control,
-.dark-mode .form-select {
+:global(.dark-mode) .form-control, :global([data-color-scheme="dark"]) .form-control,
+:global(.dark-mode) .form-select,
+:global([data-color-scheme="dark"]) .form-select {
   background: #24262B;
   color: #181B1F;
   border-color: #393E44;
@@ -1819,8 +1842,9 @@ code {
   color: #ADBAC5;
   cursor: not-allowed;
 }
-.dark-mode .form-control:disabled,
-.dark-mode .form-select:disabled {
+:global(.dark-mode) .form-control:disabled, :global([data-color-scheme="dark"]) .form-control:disabled,
+:global(.dark-mode) .form-select:disabled,
+:global([data-color-scheme="dark"]) .form-select:disabled {
   background: #393E44;
 }
 
@@ -1849,7 +1873,7 @@ code {
   color: #393E44;
   font-weight: 600;
 }
-.dark-mode .input-group .input-addon {
+:global(.dark-mode) .input-group .input-addon, :global([data-color-scheme="dark"]) .input-group .input-addon {
   background: #393E44;
   color: #F1F5F9;
 }
@@ -1904,7 +1928,7 @@ code {
   color: #24262B;
   line-height: 1.4;
 }
-.dark-mode .form-check .form-check-label {
+:global(.dark-mode) .form-check .form-check-label, :global([data-color-scheme="dark"]) .form-check .form-check-label {
   color: #FCFDFE;
 }
 
@@ -1985,7 +2009,7 @@ code {
   border: 1px solid #E3E9EE;
   box-shadow: 0 16px 40px -32px rgba(36, 38, 43, 0.45);
 }
-.dark-mode .navbar {
+:global(.dark-mode) .navbar, :global([data-color-scheme="dark"]) .navbar {
   background: rgba(24, 27, 31, 0.9);
   border-color: #393E44;
   box-shadow: 0 16px 40px -32px rgba(0, 0, 0, 0.6);
@@ -1999,7 +2023,7 @@ code {
   letter-spacing: -0.02em;
   color: #24262B;
 }
-.dark-mode .navbar .navbar-brand {
+:global(.dark-mode) .navbar .navbar-brand, :global([data-color-scheme="dark"]) .navbar .navbar-brand {
   color: #FCFDFE;
 }
 
@@ -2035,20 +2059,20 @@ code {
   color: #735FFA;
   background: rgba(115, 95, 250, 0.14);
 }
-.dark-mode .nav .nav-link {
+:global(.dark-mode) .nav .nav-link, :global([data-color-scheme="dark"]) .nav .nav-link {
   color: #C7D2DA;
 }
-.dark-mode .nav .nav-link:hover {
+:global(.dark-mode) .nav .nav-link:hover, :global([data-color-scheme="dark"]) .nav .nav-link:hover {
   color: #FCFDFE;
 }
-.dark-mode .nav .nav-link.active {
+:global(.dark-mode) .nav .nav-link.active, :global([data-color-scheme="dark"]) .nav .nav-link.active {
   color: #B9AFFC;
 }
 
 .nav-tabs {
   border-bottom: 1px solid #E3E9EE;
 }
-.dark-mode .nav-tabs {
+:global(.dark-mode) .nav-tabs, :global([data-color-scheme="dark"]) .nav-tabs {
   border-color: #393E44;
 }
 
@@ -2065,7 +2089,7 @@ code {
   background: #FCFDFE;
   color: #24262B;
 }
-.dark-mode .nav-tabs .nav-link.active {
+:global(.dark-mode) .nav-tabs .nav-link.active, :global([data-color-scheme="dark"]) .nav-tabs .nav-link.active {
   border-color: #393E44 #393E44 #181B1F #393E44;
   background: #181B1F;
 }
@@ -2106,7 +2130,7 @@ code {
   background: #FCFDFE;
   border: 1px solid #E3E9EE;
 }
-.dark-mode .pagination {
+:global(.dark-mode) .pagination, :global([data-color-scheme="dark"]) .pagination {
   background: #181B1F;
   border-color: #393E44;
 }
@@ -2140,7 +2164,7 @@ code {
   border-bottom: 1px solid #E3E9EE;
   padding-bottom: 8px;
 }
-.dark-mode .tabs {
+:global(.dark-mode) .tabs, :global([data-color-scheme="dark"]) .tabs {
   border-color: #393E44;
 }
 
@@ -2171,7 +2195,7 @@ code {
   overflow: hidden;
   background: #FCFDFE;
 }
-.dark-mode .accordion {
+:global(.dark-mode) .accordion, :global([data-color-scheme="dark"]) .accordion {
   border-color: #393E44;
   background: #181B1F;
 }
@@ -2179,7 +2203,7 @@ code {
 .accordion .accordion-item + .accordion-item {
   border-top: 1px solid #E3E9EE;
 }
-.dark-mode .accordion .accordion-item + .accordion-item {
+:global(.dark-mode) .accordion .accordion-item + .accordion-item, :global([data-color-scheme="dark"]) .accordion .accordion-item + .accordion-item {
   border-color: #393E44;
 }
 
@@ -2199,7 +2223,7 @@ code {
   padding: 0 16px 14px;
   color: #393E44;
 }
-.dark-mode .accordion .accordion-body {
+:global(.dark-mode) .accordion .accordion-body, :global([data-color-scheme="dark"]) .accordion .accordion-body {
   color: #C7D2DA;
 }
 
@@ -2212,7 +2236,7 @@ code {
   display: flex;
   flex-direction: column;
 }
-.dark-mode .card {
+:global(.dark-mode) .card, :global([data-color-scheme="dark"]) .card {
   background: #181B1F;
   border-color: #393E44;
   box-shadow: 0 20px 50px -34px rgba(0, 0, 0, 0.7);
@@ -2224,8 +2248,9 @@ code {
   font-weight: 700;
   color: #24262B;
 }
-.dark-mode .card .card-header,
-.dark-mode .card .card-footer {
+:global(.dark-mode) .card .card-header, :global([data-color-scheme="dark"]) .card .card-header,
+:global(.dark-mode) .card .card-footer,
+:global([data-color-scheme="dark"]) .card .card-footer {
   color: #FCFDFE;
 }
 
@@ -2233,7 +2258,7 @@ code {
   padding: 18px;
   color: #393E44;
 }
-.dark-mode .card .card-body {
+:global(.dark-mode) .card .card-body, :global([data-color-scheme="dark"]) .card .card-body {
   color: #C7D2DA;
 }
 
@@ -2242,7 +2267,7 @@ code {
   font-weight: 700;
   color: #24262B;
 }
-.dark-mode .card .card-title {
+:global(.dark-mode) .card .card-title, :global([data-color-scheme="dark"]) .card .card-title {
   color: #FCFDFE;
 }
 
@@ -2270,7 +2295,7 @@ code {
   background: rgba(252, 253, 254, 0.9);
   color: #24262B;
 }
-.dark-mode .alert {
+:global(.dark-mode) .alert, :global([data-color-scheme="dark"]) .alert {
   border-color: #393E44;
   background: rgba(24, 27, 31, 0.9);
   color: #FCFDFE;
@@ -2334,7 +2359,7 @@ code {
   overflow: hidden;
   box-shadow: 0 10px 28px -22px rgba(36, 38, 43, 0.5);
 }
-.dark-mode .table {
+:global(.dark-mode) .table, :global([data-color-scheme="dark"]) .table {
   background: #181B1F;
   border-color: #393E44;
 }
@@ -2345,7 +2370,7 @@ code {
   border-bottom: 1px solid #E3E9EE;
   color: #24262B;
 }
-.dark-mode .table th, .dark-mode .table td {
+:global(.dark-mode) .table th, :global([data-color-scheme="dark"]) .table th, :global(.dark-mode) .table td, :global([data-color-scheme="dark"]) .table td {
   border-color: #393E44;
   color: #FCFDFE;
 }
@@ -2354,7 +2379,7 @@ code {
   font-weight: 700;
   color: #393E44;
 }
-.dark-mode .table th {
+:global(.dark-mode) .table th, :global([data-color-scheme="dark"]) .table th {
   color: #C7D2DA;
 }
 
@@ -2365,7 +2390,7 @@ code {
 .table-striped tbody tr:nth-child(odd) {
   background: #F1F5F9;
 }
-.dark-mode .table-striped tbody tr:nth-child(odd) {
+:global(.dark-mode) .table-striped tbody tr:nth-child(odd), :global([data-color-scheme="dark"]) .table-striped tbody tr:nth-child(odd) {
   background: #24262B;
 }
 
@@ -2395,7 +2420,7 @@ code {
   width: 100%;
   overflow: hidden;
 }
-.dark-mode .modal {
+:global(.dark-mode) .modal, :global([data-color-scheme="dark"]) .modal {
   background: #181B1F;
   border-color: #393E44;
 }
@@ -2410,7 +2435,7 @@ code {
 .modal .modal-header {
   border-bottom: 1px solid #E3E9EE;
 }
-.dark-mode .modal .modal-header {
+:global(.dark-mode) .modal .modal-header, :global([data-color-scheme="dark"]) .modal .modal-header {
   border-color: #393E44;
 }
 
@@ -2422,7 +2447,7 @@ code {
   padding: 18px;
   color: #393E44;
 }
-.dark-mode .modal .modal-body {
+:global(.dark-mode) .modal .modal-body, :global([data-color-scheme="dark"]) .modal .modal-body {
   color: #C7D2DA;
 }
 
@@ -2448,7 +2473,7 @@ code {
   z-index: 10;
   display: none;
 }
-.dark-mode .dropdown-menu {
+:global(.dark-mode) .dropdown-menu, :global([data-color-scheme="dark"]) .dropdown-menu {
   background: #181B1F;
   border-color: #393E44;
 }
@@ -2468,10 +2493,10 @@ code {
   background: rgba(115, 95, 250, 0.12);
   color: #181B1F;
 }
-.dark-mode .dropdown-item {
+:global(.dark-mode) .dropdown-item, :global([data-color-scheme="dark"]) .dropdown-item {
   color: #FCFDFE;
 }
-.dark-mode .dropdown-item:hover {
+:global(.dark-mode) .dropdown-item:hover, :global([data-color-scheme="dark"]) .dropdown-item:hover {
   color: #FCFDFE;
 }
 
@@ -2483,7 +2508,7 @@ code {
   overflow: hidden;
   border: 1px solid #E3E9EE;
 }
-.dark-mode .progress {
+:global(.dark-mode) .progress, :global([data-color-scheme="dark"]) .progress {
   background: #393E44;
   border-color: #393E44;
 }
@@ -2571,7 +2596,7 @@ code {
 .u-border {
   border: 1px solid #E3E9EE;
 }
-.dark-mode .u-border {
+:global(.dark-mode) .u-border, :global([data-color-scheme="dark"]) .u-border {
   border-color: #393E44;
 }
 
@@ -2586,7 +2611,7 @@ code {
 .u-bg-ghost {
   background: #F1F5F9;
 }
-.dark-mode .u-bg-ghost {
+:global(.dark-mode) .u-bg-ghost, :global([data-color-scheme="dark"]) .u-bg-ghost {
   background: #24262B;
 }
 
@@ -2596,7 +2621,7 @@ code {
   border-radius: 16px;
   padding: 18px;
 }
-.dark-mode .u-bg-panel {
+:global(.dark-mode) .u-bg-panel, :global([data-color-scheme="dark"]) .u-bg-panel {
   background: #181B1F;
   border-color: #393E44;
 }
@@ -2624,7 +2649,7 @@ code {
   background: #F1F5F9;
   color: #24262B;
 }
-.dark-mode .badge {
+:global(.dark-mode) .badge, :global([data-color-scheme="dark"]) .badge {
   background: #393E44;
   color: #FCFDFE;
 }
